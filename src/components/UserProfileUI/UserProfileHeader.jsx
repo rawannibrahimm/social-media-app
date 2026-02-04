@@ -3,7 +3,7 @@ import { useContext, useRef, useState } from "react";
 import { FaEllipsisH, FaPen, FaSearch, FaEnvelope, FaBirthdayCake, FaVenusMars,} from "react-icons/fa";
 import { FaCamera } from "react-icons/fa";
 import { UserContext } from "../../Context/UserContext";
-import ChangeDate from "../../lib/changeDate/changeDate";
+import changeDate from "../../lib/ChangeDate/changeDate";
 import ChangePasswordModal from "../ChangePasswordModal/ChangePasswordModal";
 import { chooseFile, openFileInput } from '../../lib/AddImagePost/AddImagePost';
 import ChooseProfilePicModal from "../ChooseProfilePicModal/ChooseProfilePicModal";
@@ -88,7 +88,7 @@ export default function UserProfileHeader() {
             <div className="flex items-center gap-6 text-sm text-default-500">
                 <div className="flex items-center gap-2">
                     <FaBirthdayCake />
-                    <span>{ChangeDate(userData.dateOfBirth)}</span>
+                    <span>{changeDate(userData.dateOfBirth)}</span>
                 </div>
 
                 <div className="flex items-center gap-2">
